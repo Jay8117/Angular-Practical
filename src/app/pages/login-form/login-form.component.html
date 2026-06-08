@@ -1,14 +1,61 @@
 <div class="container">
     <div class="card">
-        <h3>Login Form</h3>
-        <form (ngSubmit)="userLogin()">
+        <h3>Template Driven Login Form</h3>
+        <form #userForm="ngForm" (ngSubmit)="userLogin(userForm)">
             <div class="common">
-                <label for="userId">UserId</label>
-                <input type="Email" class="form-control" placeholder="Enter UserId">
+                <label for="Name">User First Name*</label>
+                <input type="text" class="form-control" placeholder="Enter First Name" name="name" ngModel
+                    #name="ngModel" required pattern="^[a-zA-Z]+$" minlength="3" maxlength="10">
+                <div *ngIf="name.touched && name.invalid">
+                    <small *ngIf="name.errors?.['required']">
+                        This field is required
+                    </small>
+                    <small *ngIf="name.errors?.['pattern']">
+                        Name Only contain alphabets
+                    </small>
+                    <small *ngIf="name.errors?.['minlength']">
+                        Name atleast have 3 alphabet
+                    </small>
+                    
+
+                </div>
             </div>
             <div class="common">
-                <label for="Password">Password</label>
-                <input type="password" class="form-control" placeholder="Enter Password">
+                <label for="emailId">Email Id*</label>
+                <input type="Email" class="form-control" placeholder="Enter Email" name="email" ngModel
+                    #email="ngModel" required email>
+                <div *ngIf="email.touched && email.invalid">
+                    <small *ngIf="email.errors?.['required']">
+                        This field is required
+                    </small>
+                    <small *ngIf="email.errors?.['email']">
+                        Please Enter Valid Email
+                    </small>
+
+                </div>
+            </div>
+
+            <div class="common">
+                <label for="phoneNo">Phone Number</label>
+                <input type="number" class="form-control" placeholder="Enter Phone Number"
+                name="phone" ngModel #phone="ngModel" min="5"> 
+                <div *ngIf="phone.touched && phone.invalid">
+                    <small *ngIf="phone.errors?.['min']">
+                        Minimum 5 digit required
+                    </small>
+                    
+                </div>
+            </div>
+            <div class="common">
+                <label for="Password">Password*</label>
+                <input type="password" class="form-control" placeholder="Enter Password" name="password" ngModel
+                    #password="ngModel" required>
+                <div *ngIf="password.touched && password.invalid">
+                    <small *ngIf="password.errors?.['required']">
+                        This field is required
+                    </small>
+
+                </div>
             </div>
             <div class="common">
                 <button type="submit" class="btn btn-primary">Login</button>

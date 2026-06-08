@@ -14,7 +14,8 @@ export class LoginFormComponent implements OnInit {
     
   }
 
-  userLogin(){
+  userLogin(userData:any){
+    console.log(userData.value);
     
   }
 }

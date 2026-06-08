@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /* Horizontal center */
+}
+
+.card {
+    border-radius: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+    h3 {
+        text-align: center;
+        color: blueviolet;
+    }
+}
+.common{
+    margin-top: 10px;
+}

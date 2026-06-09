@@ -8,6 +8,8 @@ import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.compo
 import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { DynamicFieldComponent } from './pages/dynamic-field/dynamic-field.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     ReactiveFormComponent,
     LoginFormComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    DynamicFieldComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

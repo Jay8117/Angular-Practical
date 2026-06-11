@@ -1,1 +1,51 @@
-<p>dynamic-field works!</p>
+<div class="container">
+    <div class="card mt-2 p-5">
+        <div class="row">
+            <div class="col-md-5">
+                <form [formGroup]="userForm" (ngSubmit)="getData()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="Name">Name</label>
+                            <input type="text" class="form-control" placeholder="enter name" formControlName="name">
+                        </div>
+                        <div class="mt-2">
+                            <button type="button" class="btn btn-primary" (click)="addSkill()">Add Skill</button> <br>
+                        </div>
+                        <!-- Add dynamic content -->
+                        <div formArrayName="skills">
+                            <div *ngFor="let skill of skills.controls ; let i=index">
+                                <div class="col-md-6 mt-2">
+                                    <label for="skill">Add Skills</label>
+                                    <input type="text" class="form-control" placeholder="Enter Your skill"
+                                        [formControlName]="i">
+
+                                    <button type="button" class="btn btn-danger mt-2" (click)="removeSkill(i)">Remove
+                                        Skills</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-success">Get Data</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-1">
+                <div class="vertical-line"></div>
+            </div>
+
+            <div class="col-md-5">
+                <h3 style="color: blueviolet;">User List</h3>
+                <div *ngFor="let user of userData">
+                    <h5>{{ user.name }}</h5>
+                    <ul>
+                        <li *ngFor="let skill of user.skills">
+                            {{ skill }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { DynamicFieldComponent } from './pages/dynamic-field/dynamic-field.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ParentChildComponent } from './pages/parent-child/parent-child.component';
+import { ChildComponent } from './pages/parent-child/child/child.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HomeComponent } from './pages/home/home.component';
     LoginFormComponent,
     ErrorPageComponent,
     DynamicFieldComponent,
-    HomeComponent
+    HomeComponent,
+    ParentChildComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

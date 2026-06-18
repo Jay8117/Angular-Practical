@@ -6,6 +6,7 @@ import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.compo
 import { DynamicFieldComponent } from './pages/dynamic-field/dynamic-field.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ParentChildComponent } from './pages/parent-child/parent-child.component';
+import { ChildParentComponent } from './pages/child-parent/child-parent.component';
 
 const routes: Routes = [
   {path : '', redirectTo:'home', pathMatch:'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path : 'dynamic-field' , component:DynamicFieldComponent},
   {path : 'home' , component:HomeComponent},
   {path : 'parent-child' , component:ParentChildComponent},
+  {path : 'child-parent' , component:ChildParentComponent},
   {path:'**' , component:ErrorPageComponent}
 ];
 

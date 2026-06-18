@@ -12,6 +12,8 @@ import { DynamicFieldComponent } from './pages/dynamic-field/dynamic-field.compo
 import { HomeComponent } from './pages/home/home.component';
 import { ParentChildComponent } from './pages/parent-child/parent-child.component';
 import { ChildComponent } from './pages/parent-child/child/child.component';
+import { ChildParentComponent } from './pages/child-parent/child-parent.component';
+import { ChildrenComponent } from './pages/child-parent/children/children.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ChildComponent } from './pages/parent-child/child/child.component';
     DynamicFieldComponent,
     HomeComponent,
     ParentChildComponent,
-    ChildComponent
+    ChildComponent,
+    ChildParentComponent,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule,

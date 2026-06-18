@@ -1,0 +1,17 @@
+<div class="container m-5">
+    <div class="col-md-6">
+        <div class="card p-2">
+            <header>Send Data To Parent</header>
+            <form #userForm="ngForm" (ngSubmit)="sendData(userForm)">
+                <div class="mt-2">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" ngModel name="name">
+                </div>
+                <div class="mt-2">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

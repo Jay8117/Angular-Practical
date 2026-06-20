@@ -15,6 +15,8 @@ import { ChildComponent } from './pages/parent-child/child/child.component';
 import { ChildParentComponent } from './pages/child-parent/child-parent.component';
 import { ChildrenComponent } from './pages/child-parent/children/children.component';
 import { ErrorHandlingComponent } from './pages/error-handling/error-handling.component';
+import { ViewChildComponent } from './pages/view-child/view-child.component';
+import { ViewChildrenComponent } from './pages/view-child/view-children/view-children.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ErrorHandlingComponent } from './pages/error-handling/error-handling.co
     ChildComponent,
     ChildParentComponent,
     ChildrenComponent,
-    ErrorHandlingComponent
+    ErrorHandlingComponent,
+    ViewChildComponent,
+    ViewChildrenComponent
   ],
   imports: [
     BrowserModule,
